@@ -1,0 +1,7 @@
+.env
+__pycache__
+Kbds/koms_layout.py
+Kbds/__pycache__
+Handlers/__pycache__
+Handlers/commands_privat.py
+Handlers/Files/*
