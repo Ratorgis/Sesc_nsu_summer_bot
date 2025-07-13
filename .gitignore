@@ -1,7 +1,11 @@
 .env
 __pycache__
-Kbds/koms_layout.py
-Kbds/__pycache__
+__init__.py
+Keybords/koms_layout.py
+Keybords/__pycache__
+Keybords/__init__.py
 Handlers/__pycache__
 Handlers/commands_privat.py
 Handlers/Files/*
+Handlers/__init__.py
+data.py
