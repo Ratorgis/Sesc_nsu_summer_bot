@@ -12,16 +12,13 @@ phys_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Артем Бахеткин')
         ],
         [
-            KeyboardButton(text='Соня Пешкова')
-        ],
-        [
             KeyboardButton(text='Макс Рябов')
         ],
         [
             KeyboardButton(text='Арина Лукьянова')
         ],
         [
-            KeyboardButton(text='<')
+            KeyboardButton(text='< КО-25')
         ]
     ],
     resize_keyboard=True
@@ -33,6 +30,9 @@ kult_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Екатерина Кожевникова'),
         ],
         [
+            KeyboardButton(text='Соня Пешкова')
+        ],
+        [
             KeyboardButton(text='Ангелина Мустакова'),
         ],
         [
@@ -42,7 +42,7 @@ kult_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Анастасия Левашенко')
         ],
         [
-            KeyboardButton(text='<<<')
+            KeyboardButton(text='< КО-25')
         ]
     ],
     resize_keyboard=True
@@ -54,13 +54,10 @@ art_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Елизавета Саранцева'),
         ],
         [
-            KeyboardButton(text='Серафима Головатенко'),
-        ],
-        [
             KeyboardButton(text='Майя Подъячева')
         ],
         [
-            KeyboardButton(text='<<<')
+            KeyboardButton(text='< КО-25')
         ]
     ],
     resize_keyboard=True
@@ -79,7 +76,7 @@ cooker_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Егор Десяткин')
         ],
         [
-            KeyboardButton(text='Сергей Однодворцев')
+            KeyboardButton(text='Алексей Малков')
         ],
         [
             KeyboardButton(text='Варвара Медведева')
@@ -91,7 +88,7 @@ cooker_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Владимир Гильманов')
         ],
         [
-            KeyboardButton(text='<<<')
+            KeyboardButton(text='< КО-25')
         ]
     ],
     resize_keyboard=True

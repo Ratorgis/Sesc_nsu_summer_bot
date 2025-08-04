@@ -1,12 +1,12 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton,InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardRemove
 
 main_kb = ReplyKeyboardMarkup(
     keyboard = [ 
         [
-            KeyboardButton(text='Меню на сегодня'),
+            KeyboardButton(text='Меню'),
         ],
         [
-            KeyboardButton(text='Список мероприятий'),
+            KeyboardButton(text='Мероприятия'),
         ],
         [
             KeyboardButton(text='Список Комс-Отряда')
@@ -14,9 +14,26 @@ main_kb = ReplyKeyboardMarkup(
         [
             KeyboardButton(text='FAQ')
         ]
-
     ],
     resize_keyboard=True
+)
+
+admin_main_kb = ReplyKeyboardMarkup(
+    keyboard = [
+        [
+            KeyboardButton(text = 'Меню'), KeyboardButton(text = 'Update_menu')
+        ],
+        [
+            KeyboardButton(text = 'Мероприятия'), KeyboardButton(text = 'Update_events')
+        ],
+        [
+            KeyboardButton(text = 'Список Комс-Отряда')
+        ],
+        [
+            KeyboardButton(text = 'FAQ')
+        ],
+    ],
+    resize_keyboard = True
 )
 
 
@@ -38,20 +55,15 @@ group_choice_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Поворята')
         ],
         [
-            KeyboardButton(text='Звукари')
+            KeyboardButton(text='Звукарь')
         ],
         [
-            KeyboardButton(text='Видеографы')
+            KeyboardButton(text='Видеограф')
         ],
         [
-            KeyboardButton(text='<<<')
+            KeyboardButton(text='< Главное Меню')
         ]
     ],
     resize_keyboard=True
 )
-
-
-
-
-
 

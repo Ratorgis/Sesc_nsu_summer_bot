@@ -5,12 +5,12 @@ from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.memory import MemoryStorage
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 load_dotenv(find_dotenv())
 
-scheduler = AsyncIOScheduler(timezon = 'Asia/Novosibirsk')
 admins = [int(admin) for admin in os.getenv('ADMINS').split(",")]
+channel_id = os.getenv('GROUP_ID')
+news_channel_id = os.getenv('NEWS_CHANELL_ID')
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
