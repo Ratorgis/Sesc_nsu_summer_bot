@@ -24,7 +24,7 @@ admin_main_kb = ReplyKeyboardMarkup(
             KeyboardButton(text = 'Меню'), KeyboardButton(text = 'Update_menu')
         ],
         [
-            KeyboardButton(text = 'Мероприятия'), KeyboardButton(text = 'Update_events')
+            KeyboardButton(text = 'Мероприятия'), KeyboardButton(text = 'Update_news')
         ],
         [
             KeyboardButton(text = 'Список Комс-Отряда')
