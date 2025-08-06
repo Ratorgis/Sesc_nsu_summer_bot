@@ -5,7 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 
 from keyboards import layout
-from create_bot import admins, bot, news_channel_id
+from create_bot import admins, bot, news_channel_id, channel_id
 
 def get_faq_keyboard() -> InlineKeyboardMarkup:
     buttons = [
@@ -18,6 +18,7 @@ class SaveState(StatesGroup):
     waiting_for_menu = State()
     waiting_for_news = State()
 
+channel_router = Router()
 user_router = Router()
 users = []
 
@@ -50,6 +51,7 @@ FAQ_text = [
 #async def print_msg_id(message: Message):
 #    print(message.forward_from_message_id)
 
+
 @user_router.message(CommandStart())
 async def Start_message(message: Message):
     id = message.from_user.id 
@@ -70,6 +72,8 @@ async def Start_message(message: Message):
         )
     if id not in users:
         users.append(id)
+        print(users)
+
 
 @user_router.callback_query(F.data.startswith('faq_'))
 async def faq_callback(callback: types.CallbackQuery):
