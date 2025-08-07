@@ -6,7 +6,7 @@ phys_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Богдан Огай'),
         ],
         [
-            KeyboardButton(text='Александар Кучина'),
+            KeyboardButton(text='Александра Кучина'),
         ],
         [
             KeyboardButton(text='Артем Бахеткин')

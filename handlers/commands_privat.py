@@ -9,7 +9,7 @@ reply_kbds = {
     'Физорги': [koms_layout.phys_kb, 'Ежедневно проводят зарядку, спортивные активности и матчи'],
     'Культорги': [koms_layout.kult_kb, 'Готовят самые яркие мероприятия'],
     'Художники': [koms_layout.art_kb, 'Занимаюстя оформлением и дизайном всей Летней школы'],
-    'Поворята': [koms_layout.cooker_kb, 'Помогают в столовой и вкусно кормят вас']
+    'Поварята': [koms_layout.cooker_kb, 'Помогают в столовой и вкусно кормят вас']
 }
 
 @user_router_coms.message(lambda message: message.text in reply_kbds.keys())

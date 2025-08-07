@@ -115,7 +115,7 @@ async def back_to_main(message: Message):
 @user_router.message(lambda message: message.text == 'FAQ')
 async def questions_message(message: Message):
     await message.answer(
-        text = "Famoust Asking Question (Блок часто задоваемых вопросов), на которые мы постараемся ответить тут",
+        text = "Famoust Asking Question (Блок часто задаваемых вопросов), на которые мы постараемся ответить тут",
         reply_markup = get_faq_keyboard()
         )
 

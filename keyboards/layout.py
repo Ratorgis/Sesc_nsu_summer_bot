@@ -52,7 +52,7 @@ group_choice_kb = ReplyKeyboardMarkup(
             KeyboardButton(text='Физорги')
         ],
         [
-            KeyboardButton(text='Поворята')
+            KeyboardButton(text='Поварята')
         ],
         [
             KeyboardButton(text='Звукарь')
