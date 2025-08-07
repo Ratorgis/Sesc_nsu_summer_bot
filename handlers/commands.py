@@ -14,6 +14,14 @@ def get_faq_keyboard() -> InlineKeyboardMarkup:
     ]
     return InlineKeyboardMarkup(inline_keyboard=[[btn] for btn in buttons])
 
+def get_cancel_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="Отмена", callback_data="cancel_fsm")]
+        ]
+    )
+
+
 class SaveState(StatesGroup):
     waiting_for_menu = State()
     waiting_for_news = State()
@@ -121,13 +129,27 @@ async def questions_message(message: Message):
 
 @user_router.message(F.text == "Update_menu")
 async def update_menu(message: Message, state: FSMContext):
-    await message.answer("Перешли сообщение из канала, которое нужно сохранить")
+    await message.answer(
+        "Перешли сообщение из канала, которое нужно сохранить",
+        reply_markup=get_cancel_keyboard()
+    )
     await state.set_state(SaveState.waiting_for_menu)
+
 
 @user_router.message(F.text == "Update_news")
 async def update_news(message: Message, state: FSMContext):
-    await message.answer("Перешли сообщение из канала, которое нужно сохранить")
+    await message.answer(
+        "Перешли сообщение из канала, которое нужно сохранить",
+        reply_markup=get_cancel_keyboard()
+    )
     await state.set_state(SaveState.waiting_for_news)
+
+@user_router.callback_query(F.data == "cancel_fsm")
+async def cancel_fsm(callback: types.CallbackQuery, state: FSMContext):
+    await state.clear()
+    await callback.message.edit_text("Действие отменено.")
+    await callback.answer()
+
 
 @user_router.message(SaveState.waiting_for_news)
 async def save_channel_news(message: Message, state: FSMContext):
