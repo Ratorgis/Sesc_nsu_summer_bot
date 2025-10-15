@@ -5,7 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 
 from keyboards import layout
-from create_bot import admins, bot, news_channel_id, channel_id
+from create_bot import admins, bot, news_channel_id
 
 def get_faq_keyboard() -> InlineKeyboardMarkup:
     buttons = [
@@ -21,10 +21,10 @@ def get_cancel_keyboard() -> InlineKeyboardMarkup:
         ]
     )
 
-
 class SaveState(StatesGroup):
     waiting_for_menu = State()
     waiting_for_news = State()
+    waiting_for_question = State()
 
 channel_router = Router()
 user_router = Router()
